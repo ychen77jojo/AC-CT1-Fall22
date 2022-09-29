@@ -1,0 +1,159 @@
+/* Reset */
+
+html{
+    font-size: 2;
+    background-color: rgb(236, 182, 182);
+}
+
+body{
+    margin: 0;
+    justify-content: center;
+}
+
+img{
+    max-width: 50%;
+}
+
+nav ul {
+    margin:0 ;
+    padding: 9px; 
+    list-style: none;
+}
+
+
+/* nav */
+
+nav ul{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav li{
+    padding: 10px;
+    text-align: center;
+    color:black;
+    text-decoration:none;
+    text-transform:uppercase;
+    border-bottom:1px
+}
+
+nav li a{
+    color:black;
+    text-decoration:none;
+}
+
+.no-btm-bonder{
+    border-bottom:none;
+}
+
+/*main*/
+.cloud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tree{
+    display: none;
+}
+.flower{
+    display: none;
+}
+ 
+
+
+   .no-btm-border{
+    border-bottom: 1px solid rgb(148, 79, 79)
+    }
+
+    #cloudlink{
+        padding: 12px;
+        order:1;
+    }
+
+    #flowerlink{
+        padding: 12px;
+        order:2;
+    }
+
+    #treelink{
+        order:0;
+    }
+
+    .current{
+        font-style:italic;
+        font: weight 600;
+    }
+
+
+h1,h3 {
+    font-family: 'Lato', sans-serif;
+    }
+
+   h1{
+     color:rgb(226, 43, 180);
+     font-weight: 300;
+     font-size: 6rem;
+     }
+
+   h3{
+    font-weight: 400;
+    font-size: 3rem
+     }
+
+     img {
+        display: block;
+        margin: 0 auto;
+      }
+
+
+      @media(max-width:700px){  /*0-700*/
+        
+        nav ul{
+         flex-direction: row;
+         justify-content: space-around;
+        }
+        h1{color: blue;}
+
+        .tree{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cloud{
+            display: none;
+        }
+        .flower{display: none;}
+        h1{
+            font-family: 'Special Elite', cursive;
+            font-size: 4rem ;
+        }
+        html{
+            background-color: rgb(182, 217, 236);}
+         }
+
+
+
+     
+        @media(min-width:1201px){    /*1200-~*/
+         nav ul{
+             flex-direction:row;
+             justify-content:space-around;
+         }
+         h1{font-family: 'Special Elite', cursive;
+            color: rgb(83, 171, 128);}
+
+            .tree{none;
+            }
+            .cloud{
+                display: none;
+            }
+            .flower{display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 10%;
+            }
+             html{
+                background-color: rgb(182, 236, 202);}
+
+        } 
