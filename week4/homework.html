@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title>Pattern and color</title>
+
+ <style>html, body{
+    margin: 0;
+    padding: 0;
+    }
+    
+    canvas{
+        display:block;
+    }</style>
+
+</head>
+<body>
+
+<script>
+  let posX, posY
+  let cRadius = 40
+
+function setup(){
+  createCanvas(windowWidth, windowHeight)
+  
+  posX = width/2
+  posY = height/2
+  
+
+}
+  
+
+function draw(){
+  
+  
+  velX= random(-5,10)
+  velY= random(-10,10)
+  
+  posX += velX
+  posY += velY
+  
+  if(posX>=width){
+    posX=0
+  }
+  
+  if(posY>=height){
+    posY=0
+  }
+  if(posY<=0){
+    posY=height
+  }
+  
+  
+  if(posY>= height || posY <=0){
+    velY*= -1;
+  }
+    
+  if(posX<= 0 || posX >=width){
+    velX*= -1;
+  }
+  
+  fill(227,255,127)
+  strokeWeight(9);
+  stroke(255, 204, 30);
+  circle(posX, posY, cRadius*2)
+}
+</script>
+    
+</body>
+</html>
+
