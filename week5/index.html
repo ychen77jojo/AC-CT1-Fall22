@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title>time</title>
+
+    <style>html, body{
+        margin: 0;
+        padding: 0;
+        }
+        
+        canvas{
+            display:block;
+        }</style>
+
+</head>
+<body>
+
+    <script>
+        let radius
+let strWeight = 20
+let numRings = 10
+let interval = 1000
+let bgColor
+
+function setup(){
+  createCanvas(500,500);
+  colorMode(HSB,TWO_PI,1,1);
+  bgColor = color(0,0,0)
+  radius = width*0.1;
+  noFill();
+  
+  let timer1= setInterval(()=>{
+   bgColor = color(0,0,random())
+  },interval)
+                           
+}
+
+function draw(){
+  background(0)
+  strokeWeight(strWeight);
+  for(let i = 0;i< numRings;i++){
+    stroke(i*TWO_PI/numRings,0.9,0.9)
+    let thisR = radius+strWeight*i
+    
+    push()
+    translate(width/2,height/2)
+    rotate(sin(millis()*0.001)*(i*0.5+1))
+    arc(0,0,thisR*2,thisR*2,HALF_PI+QUARTER_PI,TWO_PI+QUARTER_PI)
+    pop()
+  }
+}
+    </script>
+    
+</body>
+</html>
